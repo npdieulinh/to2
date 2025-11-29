@@ -1,114 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <title>Giới thiệu bản thân</title>
 
     <style>
         body {
-            font-family: Arial;
+            font-family: "Segoe UI", Arial;
             padding: 20px;
-        }
-
-     
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 70%;
-            display: block;
+            max-width: 900px;
             margin: 0 auto;
+            background: #fdfaff;
         }
 
         h2 {
             text-align: center;
+            color: #8a6fb7;
+            margin-bottom: 10px;
         }
 
-       
-        .circle-buttons {
+        ul {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(150, 120, 200, 0.15);
+            font-size: 18px;
+            border-left: 6px solid #c3a7ff;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border: 5px solid #f7eaff;
+            box-shadow: 0 4px 10px rgba(170,140,210,0.2);
+        }
+
+        .profile-row {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+
+        .button-group {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
         }
 
         .circle {
-            width: 90px;
-            height: 90px;
+            width: 95px;
+            height: 95px;
             border-radius: 50%;
-            display: inline-flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
             color: white;
-            margin: 10px;
+            cursor: pointer;
             transition: 0.3s;
-            font-size: 16px;
+            font-size: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .circle:hover {
-            transform: scale(1.1);
+            transform: scale(1.13);
         }
 
-        .blue { background: #007bff; }
-        .red { background: #ff5722; }
-        .yellow { background: #ff9800; }
-
+        .pink { background: #f7a8d8; }     
+        .purple { background: #bca6f8; }   
+        .blue { background: #97d5ff; }     
         .content-box {
-            margin-top: 20px;
-            padding: 20px;
-            background: #f7f7f7;
-            border-radius: 12px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(150, 120, 200, 0.15);
             font-size: 18px;
+            border-left: 6px solid #d5baff;
         }
 
-.circle {
-    text-decoration: none; 
-    color: white;         
-}
-        .profile-row {
-    display: flex;
-    align-items: center;       
-    justify-content: center;    
-    gap: 25px;                  
-    margin-top: 20px;
-}
-
-.button-group {
-    display: flex;
-    gap: 15px;                 
-}
-        
-
+        h3 {
+            margin-top: 25px;
+            color: #9a7fcd;
+        }
     </style>
 </head>
 
 <body>
     
-  <h2>Tóm tắt tiểu sử</h2>
-      <ul>
-          <li>Họ và tên: Nguyễn Phương Diệu Linh</li>
-          <li>Ngày sinh:12/06/2008</li>
-          <li>Quê quán: Ninh Bình </li>
-          <li>Cung hoàng đạo: Song tử</li>
-          <li>Học tại: THPT Hoàng Hoa Thám</li>
-          <li>Môn học yêu thích: Toán, lý</li>
-          <li>Sở thích: xem phim, đọc sách</li>
-          <li>Ước mơ: Doanh nhân</li>
-      </ul>
+    <h2>Tóm tắt tiểu sử</h2>
+
+    <ul>
+        <li><b>Họ và tên:</b> Nguyễn Phương Diệu Linh</li>
+        <li><b>Ngày sinh:</b> 12/06/2008</li>
+        <li><b>Quê quán:</b> Ninh Bình</li>
+        <li><b>Cung hoàng đạo:</b> Song Tử</li>
+        <li><b>Học tại:</b> THPT Hoàng Hoa Thám</li>
+        <li><b>Môn học yêu thích:</b> Toán, Lý</li>
+        <li><b>Sở thích:</b> Xem phim, đọc sách</li>
+        <li><b>Ước mơ:</b> Doanh nhân</li>
+    </ul>
+
     <div class="profile-row">
-<img src="avt.HEIC" class="avatar">
+        <img src="avt.HEIC" class="avatar">
+
         <div class="button-group">
-<a href="tieu_su.html" class="circle blue">Tiểu sử</a>
-<a href="so_thich.html" class="circle red">Sở thích</a>
-<a href="uoc_mo.html" class="circle yellow">Ước mơ</a>
+            <a href="tieu_su.html" class="circle pink">Tiểu sử</a>
+            <a href="so_thich.html" class="circle purple">Sở thích</a>
+            <a href="uoc_mo.html" class="circle blue">Ước mơ</a>
         </div>
     </div>
-      <tr>
-          <td colspan="2">
-              <h2>Giới thiệu bản thân</h2>
-              <p align="justify" style="font-size:large">Mình là Nguyễn Phương Diệu Linh, một Song Tử đầy năng lượng và luôn tò mò về thế giới. Mình thích phong cách old money, yêu sự tinh tế và thanh lịch. Mình có niềm đam mê đặc biệt với châu Âu, nhất là Thụy Sĩ, và luôn mong một ngày được tận mắt ngắm cực quang. Trong cuộc sống, mình là người hướng tới sự hiểu biết, giao tiếp chân thành và những kết nối có ý nghĩa.</p>
-              <h3>Phim yêu thích</h3>
-          </td>
-      </tr>
+
+    <div class="content-box">
+        <h2>Giới thiệu bản thân</h2>
+        <p align="justify">
+            Mình là Nguyễn Phương Diệu Linh, một Song Tử đầy năng lượng và tò mò về thế giới. 
+            Mình yêu phong cách pastel – nhẹ nhàng, tinh tế và thanh lịch. 
+            Châu Âu, đặc biệt là Thụy Sĩ, luôn là nơi mình muốn đặt chân đến, 
+            và mong một ngày được ngắm cực quang bằng chính đôi mắt mình. 
+            Mình coi trọng sự hiểu biết, giao tiếp chân thành và những kết nối đẹp trong cuộc sống.
+        </p>
+
+        <h3>Phim yêu thích</h3>
+    </div>
+
 </body>
 </html>
