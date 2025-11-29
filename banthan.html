@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+       
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* NÚT TRÒN */
+        .circle-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            margin: 10px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        .blue { background: #007bff; }
+        .red { background: #ff5722; }
+        .yellow { background: #ff9800; }
+
+       
+        .content-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="avatar.png" class="avatar">
+
+    <h2>Mạnh Tiểu Vũ</h2>
+
+    <div class="circle-buttons">
+        <div class="circle blue" onclick="showContent('tieu_su')">Tiểu sử</div>
+        <div class="circle red" onclick="showContent('so_thich')">Sở thích</div>
+        <div class="circle yellow" onclick="showContent('uoc_mo')">Ước mơ</div>
+    </div>
+
+    <div class="content-box" id="content">
+        
+    </div>
+
+    <script>
+        function showContent(type) {
+            let text = "";
+
+            if (type === "tieu_su") {
+                text = `
+                    <b>Tiểu sử:</b><br>
+                    - Họ tên: Mạnh Tiểu Vũ<br>
+                    - Ngày sinh: 20/05/2000<br>
+                    - Quê quán: Đông Anh, Hà Nội<br>
+                    - Cung hoàng đạo: Song Tử
+                `;
+            }
+
+            if (type === "so_thich") {
+                text = `
+                    <b>Sở thích:</b><br>
+                    - Đọc sách<br>
+                    - Chơi game<br>
+                    - Nghe nhạc<br>
+                    - Tập thể thao
+                `;
+            }
+
+            if (type === "uoc_mo") {
+                text = `
+                    <b>Ước mơ:</b><br>
+                    - Trở thành nhà khoa học<br>
+                    - Xây dựng môi trường xanh sạch đẹp
+                `;
+            }
+
+            document.getElementById("content").innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>
