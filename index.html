@@ -22,7 +22,7 @@
             position: relative;
         }
 
-        /* Hiệu ứng tuyết */
+        /* Tuyết rơi */
         .snowflake {
             position: absolute;
             top: -10px;
@@ -51,30 +51,21 @@
             position: relative;
         }
 
-        /* Cây Noel */
-        .tree {
-            position: absolute;
-            top: -80px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 60px;
-        }
-
         .member-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
         }
 
         .member-card {
             background: white;
-            width: 250px;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            width: 300px;
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
             position: relative;
@@ -82,12 +73,21 @@
 
         .member-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Cây Noel trên thẻ */
+        .member-card .tree {
+            font-size: 40px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .avatar {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #ff6b81;
@@ -100,9 +100,9 @@
 
         .name {
             display: block;
-            margin-top: 15px;
-            font-size: 18px;
-            font-weight: 600;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
             color: #333;
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
@@ -118,23 +118,32 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .member-card {
+                width: 90%;
+                padding: 25px 15px;
+            }
+
+            .member-card .tree {
+                font-size: 35px;
+                top: -15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Cây Noel -->
-    <div class="tree">🎄</div>
-
     <h1 class="title">Thành Viên Tổ 2</h1>
 
     <div class="member-container">
         <div class="member-card">
+            <div class="tree">🎄</div>
             <img src="Avatar.l1.png" alt="Nguyễn Phương Diệu Linh" class="avatar">
             <a href="baitap.html" class="name">Nguyễn Phương Diệu Linh</a>
         </div>
 
         <div class="member-card">
+            <div class="tree">🎄</div>
             <img src="Avatar.l2.png" alt="Nguyễn Phương Khánh Linh" class="avatar">
             <a href="baitap1.html" class="name">Nguyễn Phương Khánh Linh</a>
         </div>
@@ -142,7 +151,7 @@
 
     <!-- Tuyết rơi -->
     <script>
-        const numberOfFlakes = 50;
+        const numberOfFlakes = 60;
         for(let i=0; i<numberOfFlakes; i++){
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
